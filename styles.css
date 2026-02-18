@@ -31,7 +31,10 @@ body{
 main{padding:0 5vw 3rem}
 section{max-width:1200px;margin:0 auto}
 .hero{min-height:86vh;display:grid;align-content:center;gap:1rem}
-.badge{width:max-content;border:1px solid rgba(159,214,255,.5);border-radius:999px;padding:.36rem .72rem;color:var(--primary);font-size:.74rem;letter-spacing:.15em}
+.badge{width:max-content;border:1px solid rgba(159,214,255,.5);border-radius:999px;padding:.36rem .72rem;color:var(--primary);font-size:.74rem;letter-spacing:.08em;white-space:nowrap}
+.badge-marquee{max-width:min(100%,920px);overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent)}
+.badge-track{display:flex;gap:.55rem;width:max-content;animation:badgeScroll 36s linear infinite}
+@keyframes badgeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 h1{margin:0;font-size:clamp(2.1rem,7vw,5.6rem);line-height:.96;max-width:11ch}
 .subtitle{max-width:64ch;color:#d4def2;font-size:clamp(1rem,1.7vw,1.24rem)}
 .subproof{color:#b9c7e4;font-size:.96rem;margin-top:-.2rem}
@@ -41,6 +44,8 @@ h1{margin:0;font-size:clamp(2.1rem,7vw,5.6rem);line-height:.96;max-width:11ch}
 .btn-primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#091426}
 .btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
 .btn-ghost:hover{border-color:rgba(159,214,255,.45);box-shadow:0 0 0 1px rgba(159,214,255,.18) inset,0 10px 22px rgba(45,91,170,.2);background:rgba(159,214,255,.08)}
+
+.nav-cta{color:#fff !important}
 
 .btn-rgb{
   background-size:200% 200%;
