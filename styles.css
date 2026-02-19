@@ -127,6 +127,8 @@ footer{border-top:1px solid var(--line);padding:1rem;text-align:center;color:var
 }
 @media (max-width:700px){
   main{padding:0 1rem calc(2rem + 88px)}.topbar{padding:.9rem 1rem}
+  body{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  footer{padding-bottom:calc(1rem + 96px + env(safe-area-inset-bottom))}
   .cards,.steps,.kpis,.trust{grid-template-columns:1fr}
   .hero{min-height:75vh}
   .btn{width:100%}
