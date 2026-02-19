@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grumpy-actors-sleep.loca.lt/sitemap.xml
+Sitemap: https://michael-rublev.github.io/qa-automation/sitemap.xml
