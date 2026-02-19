@@ -22,3 +22,15 @@ if (!reduceMotion) {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
 }
 
+const mobileCta = document.querySelector('.mobile-cta');
+const footer = document.querySelector('footer');
+const contact = document.querySelector('#contact');
+if (mobileCta && (footer || contact)) {
+  const hideTargets = [contact, footer].filter(Boolean);
+  const ctaObserver = new IntersectionObserver((entries) => {
+    const shouldHide = entries.some((entry) => entry.isIntersecting);
+    mobileCta.classList.toggle('is-hidden', shouldHide);
+  }, { threshold: 0.15 });
+  hideTargets.forEach((el) => ctaObserver.observe(el));
+}
+

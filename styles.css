@@ -145,7 +145,9 @@ footer{border-top:1px solid var(--line);padding:1rem;text-align:center;color:var
   backdrop-filter: blur(12px);
   border-top:1px solid var(--line);
   z-index:60;
+  transition:transform .22s ease, opacity .22s ease;
 }
+.mobile-cta.is-hidden{transform:translateY(110%);opacity:0;pointer-events:none}
 @media (max-width:700px){
   .mobile-cta{display:grid; grid-template-columns: 1fr 0.72fr;}
 }
